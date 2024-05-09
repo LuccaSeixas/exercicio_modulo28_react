@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Formulario = () => {
     let [materiaA, setmateriaA] = useState(0);
     let [materiaB, setmateriaB] = useState(0);
     let [materiaC, setmateriaC] = useState(0);
     let [nome, setNome] = useState('');
+
+    useEffect(() => {
+        console.log("o estado mudou")
+    }, );
 
     const alteraNome = (evento) => {
         setNome(estadoAnterior => {
